@@ -37,6 +37,8 @@ public class HomeWork2_1 {
         zoo2.feedFlyable();
         zoo2.feedSwimable();
 
+        System.out.println();
+
         //Задача №2
         //Создать класс MyList с атрибутами T[] objects, int size. T - generics.
         //Массив T[] будет создаваться при создании экземпляра класса MyList с размерностью 3.
@@ -44,5 +46,11 @@ public class HomeWork2_1 {
         //1.Создать новый массив T[] с размерностью в два раза больше предыдущей.
         //2.Скопировать со старого массива все значения в новый
         //3.Присвоить экземпляру MyList новый массив.
+        MyList myList = new MyList();
+        myList.add(1);
+        myList.add(2);
+        myList.add(3);
+        System.out.println(myList);
+
     }
 }
