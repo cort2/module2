@@ -47,9 +47,10 @@ public class HomeWork2_1 {
         //2.Скопировать со старого массива все значения в новый
         //3.Присвоить экземпляру MyList новый массив.
         MyList myList = new MyList();
-        myList.add(1);
-        myList.add(2);
-        myList.add(3);
+        for (int i = 1; i < 5; i++) {
+            myList.add(i);
+        }
+
         System.out.println(myList);
 
     }
