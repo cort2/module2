@@ -11,7 +11,7 @@ public class MyList<T> {
     public String toString() {
         return "MyList {" + "objects = " + Arrays.toString(objects) + '}';
     }
-    public boolean add(T number) {
+    public boolean add(T element) {
         if (size == objects.length) {
             T[] newArray = (T[]) new Object[objects.length * 2];
             for (int i = 0; i < objects.length; i++) {
@@ -21,7 +21,7 @@ public class MyList<T> {
         }
             for (int i = 0; i < objects.length; i++) {
                 if (objects[i] == null) {
-                    objects[i] = number;
+                    objects[i] = element;
                     break;
                 }
             }

@@ -26,7 +26,9 @@ public class HomeWork2_1 {
         zoo1.feedBitable();
         zoo1.feedFlyable();
         zoo1.feedSwimable();
-
+        zoo1.setAnimal(lion);
+        zoo1.setAnimal2(bat);
+        zoo1.setAnimal3(fish);
         System.out.println();
 
         Wolf wolf = new Wolf();
@@ -46,12 +48,10 @@ public class HomeWork2_1 {
         //1.Создать новый массив T[] с размерностью в два раза больше предыдущей.
         //2.Скопировать со старого массива все значения в новый
         //3.Присвоить экземпляру MyList новый массив.
-        MyList myList = new MyList();
+        MyList<Integer> integerMyList = new MyList<Integer>();
         for (int i = 1; i < 5; i++) {
-            myList.add(i);
+            integerMyList.add(i);
         }
-
-        System.out.println(myList);
-
+        System.out.println(integerMyList);
     }
 }
