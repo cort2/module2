@@ -1,5 +1,6 @@
 package HomeWork2_2;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Random;
 
@@ -33,6 +34,11 @@ public class HomeWork2_2 {
         // 1. Отсортировать список lists так, чтобы сначала были самые большие списки по размеру
         // 2. Вывести на экран все элементы
         // Ожидаемый результат: 3,4,5,1,2
+
+        lists.stream()
+                .sorted((a, b) -> (a.size() - b.size()) * - 1)
+                .flatMap(Collection::stream)
+                .forEach(e -> System.out.print(e));
 
         //Задача №3
         // 1. Узнать, есть ли в lists хотя бы один список, который содержит сумму всех элементов вложенного листа
