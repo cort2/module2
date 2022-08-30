@@ -38,7 +38,7 @@ public class HomeWork2_2 {
         lists.stream()
                 .sorted((a, b) -> (a.size() - b.size()) * - 1)
                 .flatMap(Collection::stream)
-                .forEach(e -> System.out.print(e));
+                .forEach(System.out::print);
 
         //Задача №3
         // 1. Узнать, есть ли в lists хотя бы один список, который содержит сумму всех элементов вложенного листа
