@@ -1,7 +1,11 @@
 package HomeWork2_2;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public class HomeWork2_2 {
     public static void main(String[] args) {
         List<Integer> integers = List.of(1,2,3,4,5,5,8,8,9);
@@ -30,9 +34,12 @@ public class HomeWork2_2 {
                 .filter(e -> e > 4)
                 .distinct()
                 .map(e -> new Users(e))
-
-//                .map(e -> e * 10)
-                .forEach(System.out::println);
+                .map(e -> e.setWithIntegers(Stream.generate(() -> random.nextInt(10))
+                        .limit(e.getId()).collect(Collectors.toList())))
+                .flatMap(e -> e.getIntegers().stream())
+                .map(e -> e * 10)
+                .reduce(Integer::sum)
+                .ifPresentOrElse(System.out::println, () -> System.out.println(0));
 
         System.out.println();
 
@@ -53,8 +60,7 @@ public class HomeWork2_2 {
         // 1. Узнать, есть ли в lists хотя бы один список, который содержит сумму всех элементов вложенного листа
         // равную 12
         boolean anyMatch = lists.stream()
-                .map(e -> e.stream())
-                .reduce((a,b) -> a + b).orElse(0)
+                .map(e -> e.stream().reduce((a,b) -> a + b).orElse(0))
                 .anyMatch(e -> e == 12);
         System.out.println(anyMatch);
     }

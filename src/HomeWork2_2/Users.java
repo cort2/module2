@@ -10,8 +10,17 @@ public class Users {
         this.id = id;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public List<Integer> getIntegers() {
+        return integers;
+    }
+
     public Users setWithIntegers(List<Integer> integers) {
         this.integers = integers;
         return this;
+
     }
 }
