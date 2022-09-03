@@ -50,7 +50,7 @@ public class HomeWork2_2 {
         // Ожидаемый результат: 3,4,5,1,2
 
         lists.stream()
-                .sorted((a, b) -> (a.size() - b.size()) * - 1)
+                .sorted((a, b) -> (b.size() - a.size()))
                 .flatMap(e -> e.stream())
                 .forEach(System.out::println);
 
