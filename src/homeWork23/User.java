@@ -7,41 +7,29 @@ public class User {
     private int age;
     private String name;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public User(int age, String name) {
         this.age = age;
         this.name = name;
     }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof User)) return false;
-        User that = (User) o;
-        return age == that.age && Objects.equals(getName(), that.getName());
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return name.equals(user.name);
     }
-//    public boolean equals(Object object) {
-//        if (object == this) {
-//            return true;
-//        }
-//        if (object == null || object.getClass() != this.getClass()) {
-//            return false;
-//        }
-//        User user = (User) object;
-//        return age == user.age && (name == user.name || (name != null && name.equals(user.getName())));
-//    }
+
+    @Override
     public int hashCode() {
-        return Objects.hash(age, getName());
+        return Objects.hash(name);
     }
-//    public int hashCode() {
-//        final int prime = 31;
-//        int result = 1;
-//        result = prime * result + ((name == null) ? 0 : name.hashCode());
-//        return result;
-//    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }

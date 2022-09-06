@@ -1,6 +1,6 @@
 package HomeWork2_1;
 
-public class Zoo <T extends Bitable, K extends Flyable, R extends Swimable> {
+public class Zoo<T extends Bitable, K extends Flyable, R extends Swimable> {
     private T animal;
     private K animal2;
     private R animal3;
