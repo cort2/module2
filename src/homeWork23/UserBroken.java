@@ -14,14 +14,19 @@ public class UserBroken {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        UserBroken that = (UserBroken) o;
-        return Objects.equals(name, that.name);
+        return true;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name);
+        return 23;
+    }
+
+    @Override
+    public String toString() {
+        return "UserBroken{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }
