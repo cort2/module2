@@ -54,9 +54,5 @@ public class HomeWork23 {
         hashMapCars.put(car7, 7);
         hashMapCars.put(car8, 8);
         System.out.println(hashMapCars);
-
-
-
-
     }
 }
