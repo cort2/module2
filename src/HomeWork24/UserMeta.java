@@ -1,7 +1,7 @@
 package HomeWork24;
 
 import java.util.Locale;
-
+@GetMetaData
 public class UserMeta {
     String name;
     Integer count;
@@ -26,7 +26,7 @@ public class UserMeta {
     public void setCount(Integer count) {
         this.count = count;
     }
-    @TimeToScale
+
     public static String GetSuperName(String prefix){
         return prefix.toUpperCase();
     }
