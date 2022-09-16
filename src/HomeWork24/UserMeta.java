@@ -3,8 +3,8 @@ package HomeWork24;
 import java.util.Locale;
 @GetMetaData
 public class UserMeta {
-    String name;
-    Integer count;
+    private String name;
+    private Integer count;
 
     public UserMeta(String name, Integer count) {
         this.name = name;
@@ -26,9 +26,10 @@ public class UserMeta {
     public void setCount(Integer count) {
         this.count = count;
     }
-
-    public static String GetSuperName(String prefix){
-        return prefix.toUpperCase();
+    @GetMetaData
+    public void  GetSuperName(String prefix){
+        name = prefix + " " + name;
+        System.out.println(name);
     }
 
     @Override
